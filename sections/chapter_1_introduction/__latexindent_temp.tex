@@ -1,0 +1,37 @@
+\chapter{Introduction}
+    \section{Generative Adversarial Networks}
+    Generative adversarial networks (GANs) are a class of artificial intelligence 
+    algorithms used in unsupervised machine learning, implemented by a system of 
+    two neural networks contesting with each other in a zero-sum game framework. 
+    They were introduced by Ian Goodfellow et al. in 2014\cite{base}. This technique 
+    can generate photographs that look at least superficially authentic to human 
+    observers, having many realistic characteristics.\cite{improvedtechniques}
+
+    \section{Generative vs Discriminative algorithms}
+    To understand GANs, you should know how generative algorithms work, and for 
+    that, contrasting them with discriminative algorithms is instructive. 
+    Discriminative algorithms try to classify input data; that is, given the 
+    features of a data instance, they predict a label or category to which that 
+    data belongs.
+
+
+    Discriminative algorithms map features to labels. They are concerned solely 
+    with that correlation. One way to think about generative algorithms is that 
+    they do the opposite. Instead of predicting a label given certain features, 
+    they attempt to predict features given a certain label.
+
+    \section{How GANs work}
+
+    One neural network, called the generator, generates new data instances, while 
+    the other, the discriminator, evaluates them for authenticity; i.e. the 
+    discriminator decides whether each instance of data it reviews belongs to the 
+    actual training dataset or not.\cite{fourj}
+
+    Steps taken by a GAN are:
+    \begin{itemize}
+    \item{The generator takes some random noise and returns an image}
+    \item{This generated image is fed to the discriminator along with a stream of 
+    images taken the actual dataset}
+    \item{The discriminator taken in both real and fake images and returns the 
+    probability of the fake image being real.}
+    \end{itemize}
