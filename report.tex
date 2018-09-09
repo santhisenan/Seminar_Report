@@ -4,9 +4,17 @@
 \usepackage{datetime}
 \usepackage{setspace}
 \usepackage{ragged2e}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{biblatex}
+% \usepackage{mathptmx}
+\usepackage{helvet}
+% \usepackage{courier}
 \usepackage[left=2cm, right=2cm, top=2cm]{geometry}
 
 \newdateformat{monthyeardate}{\monthname[\THEMONTH], \THEYEAR}
+
+\addbibresource{references.bib}
 
 \begin{document}
     \input{sections/titlepage.tex}
@@ -21,7 +29,7 @@
     % Abstract
     \newpage
     \input{sections/abstract.tex}
-    
+
     % Table of contents 
     \newpage
     \tableofcontents
@@ -31,19 +39,20 @@
 
     % Bibliography
     \newpage
-    \begin{thebibliography}{99}
-    \bibitem{base}
-        Goodfellow, Ian; Pouget-Abadie, Jean; Mirza, Mehdi; Xu, Bing; Warde-Farley, 
-        David; Ozair, Sherjil; Courville, Aaron; Bengio, Joshua 
-        \textit{Generative Adversarial Networks 2014}
+    \printbibliography
+%     \begin{thebibliography}{99}
+%     \bibitem{base}
+%         Goodfellow, Ian; Pouget-Abadie, Jean; Mirza, Mehdi; Xu, Bing; Warde-Farley, 
+%         David; Ozair, Sherjil; Courville, Aaron; Bengio, Joshua 
+%         \textit{Generative Adversarial Networks 2014}
     
-    \bibitem{improvedtechniques}
-        Salimans, Tim; Goodfellow, Ian; Zaremba, Wojciech; Cheung, Vicki; 
-        Radford, Alec; Chen, Xi. 
-        \textit{Improved Techniques for Training GANs 2016}
+%     \bibitem{improvedtechniques}
+%         Salimans, Tim; Goodfellow, Ian; Zaremba, Wojciech; Cheung, Vicki; 
+%         Radford, Alec; Chen, Xi. 
+%         \textit{Improved Techniques for Training GANs 2016}
 
-    \bibitem{fourj}
-      \textit{https://deeplearning4j.org/generative-adversarial-network}
+%     \bibitem{fourj}
+%       \textit{https://deeplearning4j.org/generative-adversarial-network}
 
-\end{thebibliography}
+% \end{thebibliography}
 \end{document}
