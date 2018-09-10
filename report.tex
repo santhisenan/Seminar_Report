@@ -7,9 +7,11 @@
 \usepackage[english]{babel}
 \usepackage{csquotes}
 \usepackage{biblatex}
-% \usepackage{mathptmx}
+\usepackage{mathptmx}
 \usepackage{helvet}
-% \usepackage{courier}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+\usepackage{dirtytalk}
 \usepackage[left=2cm, right=2cm, top=2cm]{geometry}
 
 \newdateformat{monthyeardate}{\monthname[\THEMONTH], \THEYEAR}
@@ -30,6 +32,9 @@
     \newpage
     \input{sections/abstract.tex}
 
+    % List of figures
+    \listoffigures
+
     % Table of contents 
     \newpage
     \tableofcontents
@@ -37,22 +42,12 @@
     % Chapter 1 Introduction
     \input{sections/chapter_1_introduction/introduction.tex}
 
+    % Chapter 2 The idea
+    \input{sections/chapter_2_theidea/theidea.tex}
+
+    % Chapter 3 Variations of GANs
+    \input{sections/chapter_3_variations/variations.tex}
     % Bibliography
     \newpage
     \printbibliography
-%     \begin{thebibliography}{99}
-%     \bibitem{base}
-%         Goodfellow, Ian; Pouget-Abadie, Jean; Mirza, Mehdi; Xu, Bing; Warde-Farley, 
-%         David; Ozair, Sherjil; Courville, Aaron; Bengio, Joshua 
-%         \textit{Generative Adversarial Networks 2014}
-    
-%     \bibitem{improvedtechniques}
-%         Salimans, Tim; Goodfellow, Ian; Zaremba, Wojciech; Cheung, Vicki; 
-%         Radford, Alec; Chen, Xi. 
-%         \textit{Improved Techniques for Training GANs 2016}
-
-%     \bibitem{fourj}
-%       \textit{https://deeplearning4j.org/generative-adversarial-network}
-
-% \end{thebibliography}
 \end{document}

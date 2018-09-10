@@ -2,6 +2,9 @@
     "cSpell.words": [
         "ajeesh",
         "autoencoders",
-        "gan"
+        "convolutional",
+        "gan",
+        "psnr",
+        "srgan"
     ]
 }

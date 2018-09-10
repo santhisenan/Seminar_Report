@@ -1,25 +1,76 @@
-\singlespacing
 \chapter{INTRODUCTION}
-In Artificial Intelligence (AI), we can describe machine learning (ML) as one 
-of AI's smaller subsets. Machine learning uses statistical techniques to 
-computer systems ability to progressively improve its performance on a specific 
-task with data without being explicitly programmed.\cite{Samuel59somestudies} 
-Unsupervised learning algorithms are a subset of machine learning algorithms 
-which tries to describe the structure of unlabelled data. 
+\begin{onehalfspace}
+    In Artificial Intelligence (AI), we can describe machine learning (ML) as one 
+    of AI's smaller subsets. Machine learning uses statistical techniques to 
+    computer systems ability to progressively improve its performance on a specific 
+    task with data without being explicitly programmed. \cite{Samuel59somestudies} 
+    Unsupervised learning algorithms are a subset of machine learning algorithms 
+    which tries to describe the structure of unlabelled data. 
 
-Use of generative models\cite{gen_models} is an approach to unsupervised 
-learning. The goal of a generative model is to generate data similar to the ones 
-in the dataset. 
-Generative Adversarial Network (GAN) is a type of Generative Model. Other types 
-of generative models include Variational Autoencoders (VAEs) and autoregressive 
-models like PixelRNN. GANs have been successfully applied to solve problems in 
-various domains like generating images, videos and audio, text to image 
-synthesis etc.
+    Use of generative models \cite{openai_genmodels} is an approach to unsupervised 
+    learning. The goal of a generative model is to generate data similar to the ones 
+    in the dataset. 
+    Generative Adversarial Network (GAN) is a type of Generative Model. Other types 
+    of generative models include Variational Autoencoders (VAEs) and autoregressive 
+    models like PixelRNN. GANs have been successfully applied to solve problems in 
+    various domains like generating images, videos and audio, text to image 
+    synthesis etc.
 
-GANs were originally introduced by Ian Goodfellow and his collaborators in 
-University of Montreal in 2014\cite{gans_basic}.
-Yann LeCun, Director of AI Research at Facebook and Professor at NYU called 
-adversarial training as {"the most interesting idea in the last 10 years 
-in ML"}\cite{yanlecunn_gans}.
+    GANs were originally introduced by Ian Goodfellow and his collaborators in 
+    University of Montreal in 2014 \cite{gans_basic}.
+    Yann LeCun, Director of AI Research at Facebook and Professor at NYU called 
+    adversarial training as {"the most interesting idea in the last 10 years 
+    in ML"} \cite{yanlecunn_gans}.
+
+    \section{Generative Classification Algorithms}
+    Consider a classification problem in which we have to classify an input 
+    image as that of either a cat \((y = 0)\) or a dog \((y = 1)\).  What an algorithm 
+    like logistic regression will try to do is that it will try to find a 
+    decision boundary that separates images of cats from that of dogs. Then to 
+    classify an image as that of a cat or a dog, the algorithm attempts to find 
+    out on which side of the decision boundary does the new image fall.
+
+    We can attempt to solve the above classification problem in a slightly 
+    different way. First, going through all the cat images, we can try to build 
+    a model of what a cat looks like and then create a separate model for dogs. 
+    Later to classify a new animal using this model, we first match the input 
+    image against the cat model and then against the dog model. If the picture 
+    looks more like the dogs, the classifier outputs \(y = 1\) and \(y = 0\) otherwise.
+
+    Algorithms that try to learn \(p(y|x)\) directly are called discriminative 
+    learning algorithms. These algorithms (such as logistic regression) learn 
+    the mapping directly from the set of inputs \(X\) to labels \(\{0,1\}\).
+    The second category of algorithms that try to model \(p(x|y)\) and \(p(y)\) is 
+    called generative learning algorithms. If \(y\) indicates whether an example is 
+    a dog \((1)\) or a cat \((0)\),  then \(p(x|y = 1)\) models the distribution of dogs' 
+    features and \(p(x|y = 0)\) models the distribution of cats' features.
+
+    In Bayesian statistical inference, a prior probability distribution of an 
+    uncertain quantity is the probability distribution that expresses one's 
+    beliefs about this quantity before taking evidence into account. Here \(p(y)\) 
+    is the class prior.
+
+    After modelling \(p(x|y)\) and \(p(y)\), our algorithm uses the Bayes rule to 
+    derive the posterior distribution on \(y\) given \(x\) \cite{ng2002discriminative} :
+    \begin{center}
+    \(p(y|x) = \frac{p(x|y)p(y)}{p(x)}\).    
+    \end{center}
+    
+    Here, the denominator is given by \(p(x) = p(x|y = 1)p(y = 1) + 
+    p(x|y = 0)p(y = 0)\).
+
+    According to OpenAI \cite{openai_genmodels}, generative models are one of the most promising 
+    approaches towards understanding the enormous amount of data out there in 
+    the real world. Generative models are trained on immense quantities of data 
+    from a specific domain to generate data like it. The intuition behind this 
+    approach follows a famous quote from Richard Feynman
+    \textit{\say{What I cannot create, I do not understand}} \cite{quote_rf}.
+
+    % TODO: add more on generative algorithms like domains in which they are 
+    % applied etc.
+
+
+
+\end{onehalfspace}
 
 
