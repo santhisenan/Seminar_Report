@@ -1,10 +1,10 @@
 \chapter{GAN: THE IDEA}
 \begin{onehalfspace}
-    GANs comprises two components, a generator (G) and a discriminator (D). 
+    A GAN comprises two components, a generator $(G)$ and a discriminator $(D)$. 
     The goal of the generator model is to produce new data similar to the required 
     one. The discriminator's task is to classify the data presented to it as real or 
-    fake. "Real" data belong to the original dataset, and "fake" data are those 
-    created by the generator.The generative model competes against its adversary, 
+    fake. Real data belong to the original dataset, and fake data are those 
+    forged by the generator. The generative model competes against its adversary, 
     the discriminative model that learns to determine whether a sample is from the 
     model distribution or the data distribution.    
 \section{Analogy}
@@ -19,11 +19,12 @@
 
 \section{A Mathematical Model}
 
-    Assume that the generator represented by the neural network \(G(z)\) converts 
-    the input noise \(z\) into the required output x space. Conversely, a second 
-    neural network \(D(x)\) represents discriminator, and it calculates the 
-    probability that x came from the real dataset. In both cases, θᵢ represents 
-    the weights or parameters that describe each neural network.
+    Assume that the generator represented by the neural network 
+    \(G(z, \theta_{1})\) converts the input noise \(z\) into the required output 
+    space. Conversely, a second neural network \(D(x, \theta_{2})\) represents 
+    discriminator, and it calculates the probability that x came from the real 
+    dataset. Here, $\theta_{1}$ and $\theta_{2}$ represents the weights that 
+    describe each neural network.
 
     The discriminator is trained to classify the input data as either real or 
     fake. The weights of the discriminator are updated so that it maximizes the 
@@ -37,9 +38,9 @@
     maximizes \(D(G(z))\).
 
     \begin{figure}[h]
-        \caption{Generative adversarial networks \cite{gan_image}}
         \centering
         \includegraphics[width=0.8\linewidth]{images/generative-adversarial-network.png}
+        \caption{Generative adversarial networks \cite{gan_image}}
     \end{figure} 
 
     During training, the generator is trying to maximize \(D(G(z))\) and 
