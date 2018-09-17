@@ -13,6 +13,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{dirtytalk}
 \usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage[toc]{glossaries}
 
 \newdateformat{monthyeardate}{\monthname[\THEMONTH], \THEYEAR}
 
@@ -35,6 +36,8 @@
     % List of figures
     \listoffigures
 
+    % Abbreviations
+ 
     % Table of contents 
     \newpage
     \tableofcontents
@@ -51,6 +54,9 @@
     % Chapter 4 Variational Autoencoders
     \input{sections/chapter_4_vae/vae.tex}
 
+    % Chapter 5 Conclusion
+    \input{sections/chapter_5_conclusion/conclusion.tex}
+    
     % Bibliography
     \newpage
     \printbibliography

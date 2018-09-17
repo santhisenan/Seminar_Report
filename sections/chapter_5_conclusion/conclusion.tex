@@ -1,0 +1,35 @@
+\chapter{CONCLUSION}
+\label{chapter:conclusion}
+\begin{onehalfspace}
+    In this chapter, this report compares the two approaches to generative 
+    models described in chapters \ref{chapter:gan} and \ref{chapter:vae}, 
+    namely Generative Adversarial Networks and Variational Autoencoders. 
+
+    When it comes to images, GANs in general, produce crispier images than VAEs. 
+    GANs use an adversarial method to train the network. The discriminator forces 
+    the generator to create better images that look more realistic. Meanwhile, VAEs 
+    use an user-defined loss function. This gives GANs an edge over VAEs when it 
+    comes to generating new images. Unlike variational methods, GANs does not 
+    introduce any deterministic bias. This seems to be the reason why variational 
+    methods produce blurry images \cite{gan_quora_iang}.
+
+    As GANs does not have an easily understood loss function, training a GAN may 
+    to be prove tricky. Unlike standard loss functions like squared error or 
+    log-loss, the loss function that GANs try to optimize does not have any closed 
+    form. Thus during training, a lot of trial and error is required to determine 
+    the network structure and the training protocol. This is why GANs have not been 
+    applied yet to more complex data such as text or 
+    voices \cite{gan_quora_chatviri}.
+
+    GANs are a relatively new model and, it is expected to see rapid 
+    improvements to GANs soon. A semi-supervised approach to GANs \cite{improvedGANs} 
+    introduced by researched at OpenAI has achieved remarkable results. 
+    This novel approach included the discriminator producing an additional 
+    output indicating the label of the input. On the MNIST\cite{mnist} dataset, 99.14\% 
+    accuracy was achieved by using only 10 labelled examples per class in a 
+    fully connected neural network \cite{openai_genmodels}.
+
+    Thus both GANs and VAEs have their own pros and cons. Both the approaches 
+    to generative models are equally promising and both are undergoing extensive 
+    research. 
+\end{onehalfspace}
