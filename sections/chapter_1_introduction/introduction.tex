@@ -24,7 +24,7 @@
     generative classification algorithms.
 
     \section{Generative Classification Algorithms}
-    Consider a classification problem in which we have to classify an input 
+    Consider a classification problem in which it is required to classify an input      
     image as that of either a cat \((y = 0)\) or a dog \((y = 1)\).  What an algorithm 
     like logistic regression will try to do is that it will try to find a 
     decision boundary that separates images of cats from that of dogs. Then to 
@@ -38,9 +38,9 @@
     image against the cat model and then against the dog model. If the picture 
     looks more like the dogs, the classifier outputs \(y = 1\) and \(y = 0\) otherwise.
 
-    Algorithms that try to learn \(p(y|x)\) directly are called discriminative 
-    learning algorithms. These algorithms (such as logistic regression) learn 
-    the mapping directly from the set of inputs \(X\) to labels \(\{0,1\}\).
+    Discriminative learning algorithms try to learn \(p(y|x)\) directly. 
+    These algorithms (such as logistic regression) learn 
+    the mapping directly from the input vector \(X\) to the set of labels \(\{0,1\}\).
     The second category of algorithms that try to model \(p(x|y)\) and \(p(y)\) is 
     called generative learning algorithms. If \(y\) indicates whether an example is 
     a dog \((1)\) or a cat \((0)\),  then \(p(x|y = 1)\) models the distribution of dogs' 
